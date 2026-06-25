@@ -101,6 +101,10 @@ O sistema utiliza NextAuth para autenticação.
 - Proteção de rotas
 - Controle de acesso ao painel administrativo
 
+- ### Preview
+
+![Página da Clínica](./docs/login.png)
+
 ---
 
 ## 🏥 Página Pública da Clínica
