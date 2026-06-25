@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+// @ts-ignore: Ignore missing type declarations for side-effect CSS import
 import "./globals.css";
+import { SessionAuthProvider } from "@/components/session-auth";
+import { Toaster, toast } from "sonner";
+import { QueryClientContext } from "./providers/queryclient";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +31,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <SessionAuthProvider>
+          <QueryClientContext>
+            <Toaster duration={2500} />
+            {children}
+          </QueryClientContext>
+        </SessionAuthProvider>
       </body>
     </html>
   );
