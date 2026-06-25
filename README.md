@@ -335,15 +335,17 @@ Crie um arquivo:
 Exemplo:
 
 ```env
-DATABASE_URL="postgresql://usuario:senha@localhost:5432/vetpro"
+DATABASE_URL=""
 
-NEXTAUTH_URL="http://localhost:3000"
+AUTH_SECRET=""
 
-NEXTAUTH_SECRET="sua_chave_secreta"
 
-GITHUB_ID="seu_github_id"
+#github
 
-GITHUB_SECRET="seu_github_secret"
+AUTH_GITHUB_ID=
+AUTH_GITHUB_SECRET=
+
+NEXT_PUBLIC_URL=http://localhost:3000
 ```
 
 ---
